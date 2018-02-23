@@ -67,14 +67,17 @@
          const auth = firebase.auth();
          //sign in
          firebase.auth().createUserWithEmailAndPassword(email,pass).catch(e => console.log(e.message));
+         printUsr();
     });
-
-    //realtime listener
-    firebase.auth().onAuthStateChanged(firebaseUser => {
-        if(firebaseUser){
-            console.log(firebaseUser);
-        }else{
-            console.log("not logged in");
-        }
-    });
+    
+    function printUsr(){
+        //realtime listener
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if(firebaseUser){
+                console.log(firebaseUser);
+            }else{
+                console.log("not logged in");
+            }
+        });
+    }
 }());
