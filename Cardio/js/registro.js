@@ -56,6 +56,7 @@
         const auth = firebase.auth();
         //sign in
         firebase.auth().signInWithEmailAndPassword(email,pass).catch(e => console.log(e.message));
+        printUsr();
     });
 
     //evento signup
@@ -69,14 +70,20 @@
          firebase.auth().createUserWithEmailAndPassword(email,pass).catch(e => console.log(e.message));
          printUsr();
     });
+   /*  
+    btnLogout.addEventListener("click", e=> {
+        firebase.auth().signOut();
+    }); */
     
     function printUsr(){
         //realtime listener
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser){
                 console.log(firebaseUser);
+                btnLogout.classList.remove('hide');
             }else{
                 console.log("not logged in");
+                btnLogout.classList.add('hide');
             }
         });
     }
