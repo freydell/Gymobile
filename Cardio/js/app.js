@@ -1,21 +1,62 @@
 /* (function(){
-    //Recoge elementos
-    console.log("entra a funcion");
-    var txtEmail = document.getElementById('txtEmail');
-    var txtPassword = document.getElementById('txtPassword');
-    var btnLogin = document.getElementById('btnLogin');
-    var btnSignup = document.getElementById('btnSignup');
-    var btnLogout = document.getElementById('btnLogout');
 
-    //evento login
-    btnLogin.addEventListener('click', e=>{
-        //saca email y pw
-        console.log("entra a login");
-        var email = txtEmail.value;
-        var pass = txtPassword.value;
-        var auth = firebase.auth();
-        //sign in
-        var promise = auth.signInWithEmailAndPassword(email,pass);
-        promise.catch(e => console.log(e.message));
-    });
-}()); */
+init();
+
+function init(){
+    document.getElementById("seccionRutinas").addEventListener("click", procesarClick);
+    document.getElementById("seccionEjercicios").addEventListener("click", procesarClick);
+    document.getElementById("seccionProgreso").addEventListener("click", procesarClick);
+    document.getElementById("seccionPerfil").addEventListener("click", procesarClick);
+
+}
+
+function procesarClick(evt){
+    str = evt.target.id;
+    if(str == "seccionRutinas"){
+        document.getElementById("rutinas").classList.remove("hidden");
+    }
+}
+
+})(); */
+
+window.onload = init;
+var btns;
+var secciones;
+
+function init(){
+    initialize_variables();
+    initialize_events();
+}
+
+function initialize_variables(){
+    btns = [];
+    btns[0] = document.getElementById("seccion_rutinas");
+    btns[1] = document.getElementById("seccion_ejercicios");
+    btns[2] = document.getElementById("seccion_progreso");
+    btns[3] = document.getElementById("seccion_perfil");
+
+    secciones = [];
+    secciones[0] = document.getElementById("rutinas");
+    secciones[1] = document.getElementById("ejercicios");
+    secciones[2] = document.getElementById("progreso");
+    secciones[3] = document.getElementById("perfil");
+}
+
+function initialize_events(){
+    for(var i in btns){
+        btns[i].addEventListener("click",processClick);
+    }
+}
+
+function processClick(){
+    var str = evt.target.id;
+    var section = str.split("_")[1];
+    var ref = document.getElementById(section);
+    hide();
+}
+
+function hide(){
+    for(var i in secciones){
+        secciones[i].className = "hidden";
+    }
+}
