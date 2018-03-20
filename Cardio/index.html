@@ -7,8 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Gymobile</title>
 	
-	
-	
 	<!-- Favicons (created with http://realfavicongenerator.net/)-->
 	<link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png">
@@ -19,6 +17,28 @@
 	<meta name="msapplication-TileColor" content="#00a8ff">
 	<meta name="msapplication-config" content="img/favicons/browserconfig.xml">
 	<meta name="theme-color" content="#ffffff">
+
+
+	<!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+___________________________________________________________________________________________
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+
+
+
+-->
+
 	<!-- Normalize -->
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<!-- Bootstrap -->
@@ -174,7 +194,7 @@
 					<div class="intro-table intro-table-hover">
 						<h5 class="white heading hide-hover">Premium Membership</h5>
 						<div class="bottom">
-							<h4 class="white heading small-heading no-margin regular">Register Toda</h4>
+							<h4 class="white heading small-heading no-margin regular">Register Today</h4>
 							<h4 class="white heading small-pt">20% Discount</h4>
 							<a href="#" class="btn btn-white-fill expand">Register</a>
 						</div>
@@ -236,6 +256,33 @@
 						<p class="description">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes.</p>
 					</div>
 				</div>
+				<div class="col-md-4">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="img/icons/leg-blue.png" alt="" class="icon">
+						</div>
+						<h4 class="heading">Rutina Pierna</h4>
+						<p class="description">En esta sección contamos con diferentes rutinas de piernas, los entrenamientos más duros que se pueden realizar en una sala de musculación.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="img/icons/bicep-blue.png" alt="" class="icon">
+						</div>
+						<h4 class="heading">Rutina Bicep</h4>
+						<p class="description">En esta rutina para bíceps prácticamente, vamos a utilizar los ejercicios más efectivos para potenciar el crecimiento.</p>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="service">
+						<div class="icon-holder">
+							<img src="img/icons/back-blue.png" alt="" class="icon">
+						</div>
+						<h4 class="heading">Rutina Espalda</h4>
+						<p class="description">El desarrollo de una espalda ancha y voluminosa puede mejorar enormemente tu aspecto físico.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="cut cut-bottom"></div>
@@ -260,7 +307,7 @@
 							<h4>Ben Adamson</h4>
 							<h5 class="muted regular">Fitness Instructor</h5>
 						</div>
-						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Log In Now</button>
+						<button data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill">Sign Up Now</button>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -276,7 +323,7 @@
 							<h4>Eva Williams</h4>
 							<h5 class="muted regular">Personal Trainer</h5>
 						</div>
-						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Log In Now</a>
+						<a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue-fill ripple">Sign Up Now</a>
 					</div>
 				</div>
 				<div class="col-md-4">
@@ -369,19 +416,33 @@
 			</div>
 		</div>
 	</section>
-	<div class="modal fade" data-backdrop="false" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-dialog" data-backdrop="false">
-			<div class="modal-content modal-popup" data-backdrop="false">
+	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">Log In</h3>
-				<div class="popup-form">
-					<input type="email" id="txtEmail" class="form-control form-white" placeholder="Email Address" >
-					<input type="password" id="txtPassword" class="form-control form-white" placeholder="Password" >
-				
-					<button id="btnLogin" class="btn btn-submit">Log in</button>
-					<button id="btnSignup" class="btn btn-submit">Sign up</button>
-					<button id="btnLogout" class="btn btn-submit hidden">Log out</button>
-				</div>
+				<h3 class="white">Sign Up</h3>
+				<form action="" class="popup-form">
+					<input type="text" class="form-control form-white" placeholder="Full Name">
+					<input type="text" class="form-control form-white" placeholder="Email Address">
+					<div class="dropdown">
+						<button id="dLabel" class="form-control form-white dropdown" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Pricing Plan
+						</button>
+						<ul class="dropdown-menu animated fadeIn" role="menu" aria-labelledby="dLabel">
+							<li class="animated lightSpeedIn"><a href="#">1 month membership ($150)</a></li>
+							<li class="animated lightSpeedIn"><a href="#">3 month membership ($350)</a></li>
+							<li class="animated lightSpeedIn"><a href="#">1 year membership ($1000)</a></li>
+							<li class="animated lightSpeedIn"><a href="#">Free trial class</a></li>
+						</ul>
+					</div>
+					<div class="checkbox-holder text-left">
+						<div class="checkbox">
+							<input type="checkbox" value="None" id="squaredOne" name="check" />
+							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
+						</div>
+					</div>
+					<button type="submit" class="btn btn-submit">Submit</button>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -435,9 +496,6 @@
 	<script src="js/typewriter.js"></script>
 	<script src="js/jquery.onepagenav.js"></script>
 	<script src="js/main.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/4.10.1/firebase.js"></script>
-	<script src="js/registro.js"></script>
-
 </body>
 
 </html>
