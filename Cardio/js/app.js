@@ -30,16 +30,18 @@ function init(){
 
 function initialize_variables(){
     btns = [];
-    btns[0] = document.getElementById("seccion_rutinas");
-    btns[1] = document.getElementById("seccion_ejercicios");
-    btns[2] = document.getElementById("seccion_progreso");
-    btns[3] = document.getElementById("seccion_perfil");
+    btns[0] = document.getElementById("seccion_intro");
+    btns[1] = document.getElementById("seccion_rutinas");
+    btns[2] = document.getElementById("seccion_ejercicios");
+    btns[3] = document.getElementById("seccion_progreso");
+    btns[4] = document.getElementById("seccion_perfil");
 
     secciones = [];
-    secciones[0] = document.getElementById("rutinas");
-    secciones[1] = document.getElementById("ejercicios");
-    secciones[2] = document.getElementById("progreso");
-    secciones[3] = document.getElementById("perfil");
+    secciones[0] = document.getElementById("intro");
+    secciones[1] = document.getElementById("rutinas");
+    secciones[2] = document.getElementById("ejercicios");
+    secciones[3] = document.getElementById("progreso");
+    secciones[4] = document.getElementById("perfil");
 }
 
 function initialize_events(){
@@ -48,11 +50,12 @@ function initialize_events(){
     }
 }
 
-function processClick(){
+function processClick(evt){
     var str = evt.target.id;
     var section = str.split("_")[1];
     var ref = document.getElementById(section);
     hide();
+    ref.className = "animated slideInDown";
 }
 
 function hide(){

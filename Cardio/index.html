@@ -59,7 +59,7 @@ ________________________________________________________________________________
 	<div class="preloader">
 		<img src="img/loader.gif" alt="Preloader image">
 	</div>
-	<nav class="navbar">
+	<nav class="navbar" role="navigation">
 		<div class="container">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -74,34 +74,36 @@ ________________________________________________________________________________
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				<ul class="nav navbar-nav navbar-right main-nav">
-					<li><a href="#intro">Intro</a></li>
-					<li><a href="#rutinas" id="seccionRutinas">Rutinas</a></li>
-					<li><a href="#ejercicio" id="seccionEjercicios">Ejercicios</a></li>
-					<li><a href="#progreso" id="seccionProgreso">Progreso</a></li>
-					<li><a href="#perfil" id="seccionPerfil">Perfil</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#modal1" class="btn btn-blue">Sign Up</a></li>
+					<li><a class="boton" id="seccion_intro" href="#">Intro</a></li>
+					<li><a class="boton" id="seccion_rutinas" href="#">Rutinas</a></li>
+					<li><a class="boton" id="seccion_ejercicios" href="#">Ejercicios</a></li>
+					<li><a class="boton" id="seccion_progreso" href="#">Progreso</a></li>
+					<li><a class="boton" id="seccion_perfil" href="#">Perfil</a></li>
+					<li><a data-toggle="modal" data-target="#modal1" class="btn btn-blue" href="#">Sign Up</a></li>
 				</ul>
 			</div>
 			<!-- /.navbar-collapse -->
 		</div>
 		<!-- /.container-fluid -->
 	</nav>
-	<header id="intro">
-		<div class="container">
-			<div class="table">
-				<div class="header-text">
-					<div class="row">
-						<div class="col-md-12 text-center">
-							<h3 class="light white">Cuida tu cuerpo</h3>
-							<h1 class="white typed">Es el unico lugar que tienes para vivir.</h1>
-							<span class="typed-cursor">|</span>
+	<section id="intro">
+		<header>
+			<div class="container">
+				<div class="table">
+					<div class="header-text">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h3 class="light white">Cuida tu cuerpo</h3>
+								<h1 class="white typed">Es el unico lugar que tienes para vivir.</h1>
+								<span class="typed-cursor">|</span>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</header>
-	<section>
+		</header>
+	</section>
+	<!--<section>
 		<div class="cut cut-top"></div>
 		<div class="container">
 			<div class="row intro-tables">
@@ -222,7 +224,8 @@ ________________________________________________________________________________
 			</div>
 		</div>
 	</section>
-	<section id="rutinas" class="section section-padded">
+-->
+	<section id="rutinas" class="section section-padded hidden">
 		<div class="container">
 			<div class="row text-center title">
 				<h2>Rutinas</h2>
@@ -287,15 +290,15 @@ ________________________________________________________________________________
 		</div>
 		<div class="cut cut-bottom"></div>
 	</section>
-	<section id="ejercicio" class="section section-padded">
+	<section id="ejercicios" class="section section-padded hidden">
 		<div class="container">
 			<div class="row text-center title">
-				<h2>Ejercicio</h2>
+				<h2>Ejercicios</h2>
 				<h4 class="light muted">Entre mas duro trabajes, mejor te veras!</h4>
 			</div>
 	</section>
 
-	<section id="progreso" class="section section-padded">
+	<section id="progreso" class="section section-padded hidden">
 		<div class="container">
 			<div class="row text-center title">
 				<h2>Progreso</h2>
@@ -303,7 +306,7 @@ ________________________________________________________________________________
 			</div>
 	</section>
 
-	<section id="perfil" class="section gray-bg">
+	<section id="perfil" class="section gray-bg hidden">
 		<div class="container">
 			<div class="row title text-center">
 				<h2 class="margin-top">Perfil</h2>
@@ -328,7 +331,7 @@ ________________________________________________________________________________
 			</div>
 		</div>
 	</section>
-	<section id="pricing" class="section">
+	<!-- <section id="pricing" class="section">
 		<div class="container">
 			<div class="row title text-center">
 				<h2 class="margin-top white">Pricing</h2>
@@ -398,8 +401,8 @@ ________________________________________________________________________________
 				</div>
 			</div>
 		</div>
-	</section>
-	<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	</section> -->
+	<!-- <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
@@ -428,7 +431,7 @@ ________________________________________________________________________________
 				</form>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<footer>
 		<div class="container">
 			<div class="row">
