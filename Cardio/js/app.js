@@ -1,22 +1,17 @@
 /* (function(){
-
 init();
-
 function init(){
     document.getElementById("seccionRutinas").addEventListener("click", procesarClick);
     document.getElementById("seccionEjercicios").addEventListener("click", procesarClick);
     document.getElementById("seccionProgreso").addEventListener("click", procesarClick);
     document.getElementById("seccionPerfil").addEventListener("click", procesarClick);
-
 }
-
 function procesarClick(evt){
     str = evt.target.id;
     if(str == "seccionRutinas"){
         document.getElementById("rutinas").classList.remove("hidden");
     }
 }
-
 })(); */
 
 window.onload = init;
