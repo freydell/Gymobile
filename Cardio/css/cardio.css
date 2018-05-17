@@ -473,6 +473,16 @@ section {
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
 }
+.service .icon-holder1 {
+	position: relative;
+	top: 100px;
+	display: inline-block;
+	margin-bottom: 40px;
+	padding: 10px;
+	background: white;
+	-webkit-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
 
 .service .heading {
 	position: relative;
@@ -482,7 +492,11 @@ section {
 }
 
 .service .icon-holder > img.icon {
-	width: 40px;
+	width: 150px;
+}
+
+.service .icon-holder1 > img.icon {
+	width: 70px;
 }
 
 .service:hover {
@@ -490,6 +504,10 @@ section {
 }
 
 .service:hover .icon-holder {
+	top: -30px;
+}
+
+.service:hover .icon-holder1 {
 	top: -30px;
 }
 
